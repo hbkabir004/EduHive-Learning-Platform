@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
+import Blog from './components/Blog';
 import Main from './components/Main';
 
 function App() {
@@ -10,12 +10,8 @@ function App() {
       element: <Main></Main>,
       children: [
         {
-          path: '/',
-          element: <Header></Header>
-        },
-        {
-          path: '/',
-          element: <Header></Header>
+          path: '/blog',
+          element: <Blog></Blog>
         },
       ]
     },

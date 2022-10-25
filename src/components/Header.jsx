@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -6,8 +7,8 @@ const Header = () => {
         <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
             <div class="relative flex items-center justify-between">
                 <div class="flex items-center">
-                    <a
-                        href="/"
+                    <Link
+                        to="/"
                         aria-label="Learn with Aungstrome"
                         title="Learn with Aungstrome"
                         class="inline-flex items-center mr-8"
@@ -30,70 +31,70 @@ const Header = () => {
                         <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                             Aungstrome EduHive
                         </span>
-                    </a>
+                    </Link>
                     <ul class="flex items-center hidden space-x-8 lg:flex">
                         <li>
-                            <a
-                                href="/"
+                            <Link
+                                to="/"
                                 aria-label="Our product"
                                 title="Our product"
                                 class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
-                                Product
-                            </a>
+                                Courses
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="/"
+                            <Link
+                                to="/"
                                 aria-label="Our product"
                                 title="Our product"
                                 class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                                 Features
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="/"
+                            <Link
+                                to="/"
                                 aria-label="Product pricing"
                                 title="Product pricing"
                                 class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
-                                Pricing
-                            </a>
+                                FAQ
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="/"
-                                aria-label="About us"
-                                title="About us"
+                            <Link
+                                to="/blog"
+                                aria-label="Blog"
+                                title="Blog"
                                 class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
-                                About us
-                            </a>
+                                Blog
+                            </Link>
                         </li>
                     </ul>
                 </div>
                 <ul class="flex items-center hidden space-x-8 lg:flex">
                     <li>
-                        <a
-                            href="/"
+                        <Link
+                            to="/"
                             aria-label="Sign in"
                             title="Sign in"
                             class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                             Sign in
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="/"
+                        <Link
+                            to="/"
                             class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                             aria-label="Sign up"
                             title="Sign up"
                         >
                             Sign up
-                        </a>
+                        </Link>
                     </li>
                 </ul>
                 <div class="lg:hidden">
@@ -123,8 +124,8 @@ const Header = () => {
                             <div class="p-5 bg-white border rounded shadow-sm">
                                 <div class="flex items-center justify-between mb-4">
                                     <div>
-                                        <a
-                                            href="/"
+                                        <Link
+                                            to="/"
                                             aria-label="Company"
                                             title="Company"
                                             class="inline-flex items-center"
@@ -147,7 +148,7 @@ const Header = () => {
                                             <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                                                 Company
                                             </span>
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div>
                                         <button
@@ -168,64 +169,64 @@ const Header = () => {
                                 <nav>
                                     <ul class="space-y-4">
                                         <li>
-                                            <a
-                                                href="/"
+                                            <Link
+                                                to="/"
                                                 aria-label="Our product"
                                                 title="Our product"
                                                 class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
                                                 Product
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a
-                                                href="/"
+                                            <Link
+                                                to="/"
                                                 aria-label="Our product"
                                                 title="Our product"
                                                 class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
                                                 Features
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a
-                                                href="/"
+                                            <Link
+                                                to="/"
                                                 aria-label="Product pricing"
                                                 title="Product pricing"
                                                 class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
                                                 Pricing
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a
-                                                href="/"
-                                                aria-label="About us"
-                                                title="About us"
+                                            <Link
+                                                to="/blog"
+                                                aria-label="Blog"
+                                                title="Blog"
                                                 class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
-                                                About us
-                                            </a>
+                                                Blog
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a
-                                                href="/"
+                                            <Link
+                                                to="/"
                                                 aria-label="Sign in"
                                                 title="Sign in"
                                                 class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
                                                 Sign in
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a
-                                                href="/"
+                                            <Link
+                                                to="/"
                                                 class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                                                 aria-label="Sign up"
                                                 title="Sign up"
                                             >
                                                 Sign up
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </nav>
