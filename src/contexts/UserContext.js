@@ -1,6 +1,8 @@
 import {
   createUserWithEmailAndPassword,
+  FacebookAuthProvider,
   getAuth,
+  GithubAuthProvider,
   GoogleAuthProvider,
   onAuthStateChanged,
   sendEmailVerification,
@@ -17,7 +19,9 @@ import app from '../firebase/firebase.init'
   export const AuthContext = createContext()
   
   const UserContext = ({ children }) => {
-    const googleProvider = new GoogleAuthProvider()
+    const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
+    const facebokkProvider = new FacebookAuthProvider();
   
     const [user, setUser] = useState({})
     const [loading, setLoading] = useState(true)
@@ -45,6 +49,17 @@ import app from '../firebase/firebase.init'
     const signInWithGoogle = () => {
       setLoading(true)
       return signInWithPopup(auth, googleProvider)
+    }
+
+    //Github Signin
+    const signInWithGithub = () =>{
+      setLoading(true)
+      return signInWithPopup(auth, githubProvider)
+    }
+    //Facebook Signin
+    const signInWithFacebook = () =>{
+      setLoading(true)
+      return signInWithPopup(auth, facebokkProvider)
     }
   
     // 5. Logout
@@ -86,6 +101,8 @@ import app from '../firebase/firebase.init'
       updateUserProfile,
       verifyEmail,
       signInWithGoogle,
+      signInWithGithub,
+      signInWithFacebook,
       logout,
       signin,
       resetPassword,

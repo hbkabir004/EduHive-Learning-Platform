@@ -10,7 +10,7 @@ const SignIn = () => {
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
 
-    const { signin, resetPassword, signInWithGoogle } = useContext(AuthContext)
+    const { signin, resetPassword, signInWithGoogle, signInWithFacebook, signInWithGithub } = useContext(AuthContext)
 
     const handleSubmit = event => {
         event.preventDefault()
@@ -32,6 +32,21 @@ const SignIn = () => {
     const handleGoogleSignin = () => {
         signInWithGoogle().then(result => {
             console.log(result.user)
+            navigate(from, { replace: true })
+        })
+    }
+
+    //GitHub Signin
+    const handleGithubSignin = () => {
+        signInWithGithub().then(result => {
+            console.log(result.user);
+            navigate(from, { replace: true })
+        })
+    }
+    //Facebook Signin
+    const handleFacebookSignin = () => {
+        signInWithFacebook().then(result => {
+            console.log(result.user);
             navigate(from, { replace: true })
         })
     }
@@ -131,7 +146,7 @@ const SignIn = () => {
                             <path d='M16.318 13.714v5.484h9.078c-0.37 2.354-2.745 6.901-9.078 6.901-5.458 0-9.917-4.521-9.917-10.099s4.458-10.099 9.917-10.099c3.109 0 5.193 1.318 6.38 2.464l4.339-4.182c-2.786-2.599-6.396-4.182-10.719-4.182-8.844 0-16 7.151-16 16s7.156 16 16 16c9.234 0 15.365-6.49 15.365-15.635 0-1.052-0.115-1.854-0.255-2.651z'></path>
                         </svg>
                     </button>
-                    <button aria-label='Log in with Facebook' className='p-3 rounded-sm'>
+                    <button onClick={handleFacebookSignin} aria-label='Log in with Facebook' className='p-3 rounded-sm'>
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 24 24'
@@ -140,7 +155,7 @@ const SignIn = () => {
                             <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
                         </svg>
                     </button>
-                    <button aria-label='Log in with GitHub' className='p-3 rounded-sm'>
+                    <button onClick={handleGithubSignin} aria-label='Log in with GitHub' className='p-3 rounded-sm'>
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 32 32'

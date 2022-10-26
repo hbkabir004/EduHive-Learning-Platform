@@ -160,6 +160,8 @@ const Header = () => {
                     {user?.photoURL ?
 
                         <img
+                            aria-label={user?.displayName}
+                            title={user?.displayName}
                             className='w-10 h-10 rounded-full'
                             src={user?.photoURL}>
                         </img>
@@ -402,7 +404,7 @@ const Header = () => {
                     )}
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
