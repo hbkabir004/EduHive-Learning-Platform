@@ -84,10 +84,10 @@ const Header = () => {
                     <ul class="flex items-center hidden space-x-8 lg:flex">
                         <li>
                             <Link
-                                to="/"
-                                aria-label="Our product"
-                                title="Our product"
-                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                to="/courses"
+                                aria-label="Courses"
+                                title="Courses"
+                                class="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                                 Courses
                             </Link>
@@ -95,19 +95,19 @@ const Header = () => {
                         <li>
                             <Link
                                 to="/"
-                                aria-label="Our product"
-                                title="Our product"
-                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                aria-label="Courses"
+                                title="Courses"
+                                class="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                                 Features
                             </Link>
                         </li>
                         <li>
                             <Link
-                                to="/"
+                                to="/faq"
                                 aria-label="FAQ"
                                 title="FAQ"
-                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                class="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                                 FAQ
                             </Link>
@@ -117,7 +117,7 @@ const Header = () => {
                                 to="/blog"
                                 aria-label="Blog"
                                 title="Blog"
-                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                class="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                                 Blog
                             </Link>
@@ -141,13 +141,13 @@ const Header = () => {
                                             to="/signin"
                                             aria-label="Sign in"
                                             title="Sign in"
-                                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                            class="font-semibold tracking-wide text-deep-purple-accent-400 transition-colors duration-200 hover:text-gray-700"
                                         >
                                             Sign in
                                         </Link>
                                         <Link
                                             to="/signup"
-                                            class="ml-5 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                            class="ml-5 inline-flex items-center justify-center h-12 px-6 font-semibold tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                                             aria-label="Sign up"
                                             title="Sign up"
                                         >
@@ -242,7 +242,7 @@ const Header = () => {
                                                 <rect x="14" y="11" width="7" height="12" />
                                             </svg>
                                             <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                                Courses
+                                                Aungstrome EduHive
                                             </span>
                                         </Link>
                                     </div>
@@ -266,12 +266,12 @@ const Header = () => {
                                     <ul class="space-y-4">
                                         <li>
                                             <Link
-                                                to="/"
-                                                aria-label="Our product"
-                                                title="Our product"
-                                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                to="/courses"
+                                                aria-label="Courses"
+                                                title="Courses"
+                                                class="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
-                                                Product
+                                                Courses
                                             </Link>
                                         </li>
                                         <li>
@@ -279,17 +279,17 @@ const Header = () => {
                                                 to="/"
                                                 aria-label="Our product"
                                                 title="Our product"
-                                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                class="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
                                                 Features
                                             </Link>
                                         </li>
                                         <li>
                                             <Link
-                                                to="/"
+                                                to="/faq"
                                                 aria-label="FAQ"
                                                 title="FAQ"
-                                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                class="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
                                                 FAQ
                                             </Link>
@@ -299,7 +299,7 @@ const Header = () => {
                                                 to="/blog"
                                                 aria-label="Blog"
                                                 title="Blog"
-                                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                class="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
                                                 Blog
                                             </Link>
@@ -309,7 +309,7 @@ const Header = () => {
                                                 to="/"
                                                 aria-label="Sign in"
                                                 title="Sign in"
-                                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                class="font-semibold tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
                                                 Sign in
                                             </Link>
@@ -317,7 +317,7 @@ const Header = () => {
                                         <li>
                                             <Link
                                                 to="/"
-                                                class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                                class="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                                                 aria-label="Sign up"
                                                 title="Sign up"
                                             >
@@ -341,13 +341,13 @@ const Header = () => {
                                                                 to="/signin"
                                                                 aria-label="Sign in"
                                                                 title="Sign in"
-                                                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                                class="font-semibold tracking-wide text-deep-purple-accent-400  transition-colors duration-200 hover:text-gray-700"
                                                             >
                                                                 Sign in
                                                             </Link>
                                                             <Link
                                                                 to="/signup"
-                                                                class="ml-5 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                                                class="ml-5 inline-flex items-center justify-center h-12 px-6 font-semibold tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                                                                 aria-label="Sign up"
                                                                 title="Sign up"
                                                             >
@@ -360,6 +360,8 @@ const Header = () => {
                                         {user?.photoURL ?
 
                                             <img
+                                                aria-label={user?.displayName}
+                                                title={user?.displayName}
                                                 className='w-10 h-10 rounded-full'
                                                 src={user?.photoURL}>
                                             </img>
