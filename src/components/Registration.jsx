@@ -8,7 +8,7 @@ const Registration = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || '/'
-    const { createUser, updateName, verifyEmail, signInWithGoogle } = useContext(AuthContext)
+    const { createUser, updateUserProfile, verifyEmail, signInWithGoogle } = useContext(AuthContext)
 
     // // Signup using Email & Pass
     const handleSubmit = event => {
@@ -19,17 +19,23 @@ const Registration = () => {
         const email = form.email.value;
         const password = form.password.value;
         const photoURL = form.photo.value;
-        console.log(name, email, password, photoURL);
+        // console.log(name, email, password, photoURL);
 
         //1. Create Account
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
 
+                // const handleUpdateUserProfile = (name, photoURL) => {
+                const profile = {
+                    displayName: name,
+                    photoURL: photoURL
+                }
+
                 //2. Update Name
-                updateName(name)
+                updateUserProfile(profile)
                     .then(() => {
-                        toast.success('Name Updated')
+                        toast.success('Profile Updated')
 
                         //3. Email verification
                         verifyEmail()
@@ -44,6 +50,9 @@ const Registration = () => {
                     .catch(error => {
                         toast.error(error.message)
                     })
+                // }
+
+                console.log('this->', name, photoURL);
             })
             .catch(error => console.log(error))
     }
@@ -72,7 +81,7 @@ const Registration = () => {
                     <div className='space-y-4'>
                         <div>
                             <label htmlFor='email' className='block mb-2 text-sm'>
-                                Name
+                                Full Name
                             </label>
                             <input
                                 type='text'

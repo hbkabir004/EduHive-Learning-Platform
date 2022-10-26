@@ -1,8 +1,57 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { FaUser } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { AuthContext } from '../contexts/UserContext';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { user, logout } = useContext(AuthContext);
+    console.log(user);
+
+    const handleLogout = () => {
+        logout()
+            .then(toast.warning('User logged out!'))
+            .catch(error => console.log(error))
+    }
+
+    /* //For Theme Switcher
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+    // Change the icons inside the button based on previous settings
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        themeToggleLightIcon.classList.remove('hidden');
+    } else {
+        themeToggleDarkIcon.classList.remove('hidden');
+    }
+
+    const handleThemeToggle = () => {
+        // toggle icons inside button
+        themeToggleDarkIcon.classList.toggle('hidden');
+        themeToggleLightIcon.classList.toggle('hidden');
+
+        // if set via local storage previously
+        if (localStorage.getItem('color-theme')) {
+            if (localStorage.getItem('color-theme') === 'light') {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            }
+
+            // if NOT set via local storage previously
+        } else {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        }
+    } */
     return (
         <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
             <div class="relative flex items-center justify-between">
@@ -56,8 +105,8 @@ const Header = () => {
                         <li>
                             <Link
                                 to="/"
-                                aria-label="Product pricing"
-                                title="Product pricing"
+                                aria-label="FAQ"
+                                title="FAQ"
                                 class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                                 FAQ
@@ -77,26 +126,71 @@ const Header = () => {
                 </div>
                 <ul class="flex items-center hidden space-x-8 lg:flex">
                     <li>
-                        <Link
-                            to="/signin"
-                            aria-label="Sign in"
-                            title="Sign in"
-                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                            Sign in
-                        </Link>
+                        <>
+                            {
+                                user?.uid ?
+                                    <>
+                                        <span className='mr-5 text-deep-purple-accent-400 font-semibold'>{user?.displayName}</span>
+                                        <button
+                                            onClick={handleLogout}
+                                            className='px-8 py-3 font-semibold rounded-md bg-deep-purple-accent-400 hover:bg-gray-700 hover:text-white text-gray-100'>Log out</button>
+                                    </>
+                                    :
+                                    <>
+                                        <Link
+                                            to="/signin"
+                                            aria-label="Sign in"
+                                            title="Sign in"
+                                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                        >
+                                            Sign in
+                                        </Link>
+                                        <Link
+                                            to="/signup"
+                                            class="ml-5 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                            aria-label="Sign up"
+                                            title="Sign up"
+                                        >
+                                            Sign up
+                                        </Link>
+                                    </>
+                            }
+                        </>
                     </li>
-                    <li>
-                        <Link
-                            to="/signup"
-                            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                            aria-label="Sign up"
-                            title="Sign up"
-                        >
-                            Sign up
-                        </Link>
-                    </li>
+                    {user?.photoURL ?
+
+                        <img
+                            className='w-10 h-10 rounded-full'
+                            src={user?.photoURL}>
+                        </img>
+                        : <FaUser></FaUser>
+                    }
+
+
+                    {/* <button
+                        onClick={handleThemeToggle}
+                        id="theme-toggle"
+                        type="button"
+                        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                        <svg
+                            id="theme-toggle-dark-icon"
+                            class="hidden w-5 h-5"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg
+                            id="theme-toggle-light-icon"
+                            class="hidden w-5 h-5"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button> */}
                 </ul>
+
                 <div class="lg:hidden">
                     <button
                         aria-label="Open Menu"
@@ -146,7 +240,7 @@ const Header = () => {
                                                 <rect x="14" y="11" width="7" height="12" />
                                             </svg>
                                             <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                                Company
+                                                Courses
                                             </span>
                                         </Link>
                                     </div>
@@ -191,11 +285,11 @@ const Header = () => {
                                         <li>
                                             <Link
                                                 to="/"
-                                                aria-label="Product pricing"
-                                                title="Product pricing"
+                                                aria-label="FAQ"
+                                                title="FAQ"
                                                 class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                             >
-                                                Pricing
+                                                FAQ
                                             </Link>
                                         </li>
                                         <li>
@@ -208,7 +302,7 @@ const Header = () => {
                                                 Blog
                                             </Link>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <Link
                                                 to="/"
                                                 aria-label="Sign in"
@@ -227,7 +321,80 @@ const Header = () => {
                                             >
                                                 Sign up
                                             </Link>
+                                        </li> */}
+
+                                        <li>
+                                            <>
+                                                {
+                                                    user?.uid ?
+                                                        <>
+                                                            <span className='mr-5 text-deep-purple-accent-400 font-semibold'>{user?.displayName}</span>
+                                                            <button
+                                                                onClick={handleLogout}
+                                                                className='px-8 py-3 font-semibold rounded-md bg-deep-purple-accent-400 hover:bg-gray-700 hover:text-white text-gray-100'>Log out</button>
+                                                        </>
+                                                        :
+                                                        <>
+                                                            <Link
+                                                                to="/signin"
+                                                                aria-label="Sign in"
+                                                                title="Sign in"
+                                                                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                            >
+                                                                Sign in
+                                                            </Link>
+                                                            <Link
+                                                                to="/signup"
+                                                                class="ml-5 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                                                aria-label="Sign up"
+                                                                title="Sign up"
+                                                            >
+                                                                Sign up
+                                                            </Link>
+                                                        </>
+                                                }
+                                            </>
                                         </li>
+                                        {user?.photoURL ?
+
+                                            <img
+                                                className='w-10 h-10 rounded-full'
+                                                src={user?.photoURL}>
+                                            </img>
+                                            : <FaUser></FaUser>
+                                        }
+
+                                        {/* <li>
+                                           <Nav>
+                                            <>
+                                                {
+                                                    user?.uid ?
+                                                        <>
+                                                            <span>{user?.displayName}</span>
+                                                            <Button variant="light" onClick={handleLogOut}>Log out</Button>
+                                                        </>
+                                                        :
+                                                        <>
+                                                            <Link to='/login'>Login</Link>
+                                                            <Link to='/register'>Register</Link>
+                                                        </>
+                                                }
+
+
+                                            </>
+                                            <Link to="/profile">
+                                                {user?.photoURL ?
+                                                    <Image
+                                                        style={{ height: '30px' }}
+                                                        roundedCircle
+                                                        src={user?.photoURL}>
+                                                    </Image>
+                                                    : <FaUser></FaUser>
+                                                }
+                                            </Link>
+                                        </Nav>
+                                        </li> */}
+
                                     </ul>
                                 </nav>
                             </div>

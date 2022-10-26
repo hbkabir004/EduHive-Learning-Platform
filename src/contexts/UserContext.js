@@ -1,14 +1,14 @@
 import {
-    createUserWithEmailAndPassword,
-    getAuth,
-    GoogleAuthProvider,
-    onAuthStateChanged,
-    sendEmailVerification,
-    sendPasswordResetEmail,
-    signInWithEmailAndPassword,
-    signInWithPopup,
-    signOut,
-    updateProfile
+  createUserWithEmailAndPassword,
+  getAuth,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+  sendEmailVerification,
+  sendPasswordResetEmail,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+  updateProfile
 } from 'firebase/auth'
 import React, { createContext, useEffect, useState } from 'react'
 import app from '../firebase/firebase.init'
@@ -28,12 +28,11 @@ import app from '../firebase/firebase.init'
       return createUserWithEmailAndPassword(auth, email, password)
     }
   
-    //   2. Update Name
-  
-    const updateName = name => {
+    //   2. Update User Profile
+    const updateUserProfile = (profile) => {
       setLoading(true)
-      return updateProfile(auth.currentUser, { displayName: name })
-    }
+      return updateProfile(auth.currentUser, profile);
+  }
   
     //   3. Email Verify
     const verifyEmail = () => {
@@ -65,6 +64,8 @@ import app from '../firebase/firebase.init'
       setLoading(true)
       return sendPasswordResetEmail(auth, email)
     }
+    
+    //8. 
   
     useEffect(() => {
       //this part will execute once the component is mounted.
@@ -82,7 +83,7 @@ import app from '../firebase/firebase.init'
     const authInfo = {
       user,
       createUser,
-      updateName,
+      updateUserProfile,
       verifyEmail,
       signInWithGoogle,
       logout,
