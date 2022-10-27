@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CourseCard = ({ singleCourse }) => {
-    const { id, title, category, price, about, img } = singleCourse;
+    const { id, title, price, about, img } = singleCourse;
 
     return (
         <div className='dark:bg-gray-600'>

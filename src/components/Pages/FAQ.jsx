@@ -87,26 +87,26 @@ const FAQ = () => {
                                         height="24"
                                     />
                                 </svg>
-                                <span class="relative">Frequently Asked Questions</span>
+                                <span class="relative dark:text-gray">Frequently Asked Questions</span>
                             </span>
                         </h2>
-                        <p class="text-base text-gray-700 md:text-lg">
+                        <p class="text-base text-gray-700 md:text-lg dark:text-white">
                             This page is a central hub where its customers can always go to with their most common questions. These are the most popular questions about EduHive.
                         </p>
                     </div>
                 </div>
-                <div class="space-y-4">
-                    <Item className="font-semibold" title="Solve problems with your Coursera account">
+                <div class="space-y-4 dark:bg-black dark:text-white">
+                    <Item title="Solve problems with your Coursera account">
                         If you need to change your Coursera account settings, like your name, email address, or password, you can use your Settings page.
                     </Item>
-                    <Item className="font-semibold" title="What about the Video translations?">
+                    <Item title="What about the Video translations?">
                         To see translated subtitles for a video, turn subtitles on and choose the language you want to see subtitles in. <br></br>
                         You can see what languages are available for a course by checking the course's description page. If a language is listed, that means at least 80\% of the course's video subtitles have been translated. When you search for courses, you can filter your search to find courses that have translations in certain languages.
                     </Item>
-                    <Item className="font-semibold" title="How I can Change my subscription plan">
+                    <Item title="How I can Change my subscription plan">
                         Some Specializations are available for subscriptions on a monthly plan. Your credit card will be charged every month as long as your subscription is active. You can cancel a subscription any time.
                     </Item>
-                    <Item className="font-semibold" title="What about the Refund policies?">
+                    <Item title="What about the Refund policies?">
                         If you decide not to complete a course or Specialization that you've paid for, Eduhive may be able to refund your payment depending on our refund policies. You can read our refund policies in full in Coursera's Terms of Use.
                     </Item>
                 </div>

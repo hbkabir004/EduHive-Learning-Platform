@@ -13,7 +13,7 @@ const Categories = () => {
 
     return (
         <div>
-            <h1 className='dark:bg-gray-700 dark:text-white  font-semibold text-xl p-5 rounded-md shadow-md mx-10 text-center text-deep-purple-accent-400 hover:shadow-xl hover:text-gray-700'>Course Categories: {categories.length}</h1>
+            <h1 className='dark:bg-black dark:text-white  font-semibold text-xl p-5 rounded-md shadow-md mx-10 text-center text-deep-purple-accent-400 hover:shadow-xl hover:text-gray-700'>Course Categories: {categories.length}</h1>
 
             <div className='font-semibold py-5 rounded-md mx-10 text-center '>
                 {
