@@ -33,7 +33,7 @@ function App() {
           loader: ()=> fetch(`https://eduhive-server.vercel.app/category`)
         },
         {
-          path: '/allcourses',
+          path: '/course',
           element: <AllCourse></AllCourse>,
           loader: ()=> fetch(`https://eduhive-server.vercel.app/courses`)
         },

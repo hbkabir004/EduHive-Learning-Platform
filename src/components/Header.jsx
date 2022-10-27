@@ -7,8 +7,6 @@ import { AuthContext } from '../contexts/UserContext';
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { user, logout } = useContext(AuthContext);
-    console.log(user);
-
     const handleLogout = () => {
         logout()
             .then(toast.warning('User logged out!'))
