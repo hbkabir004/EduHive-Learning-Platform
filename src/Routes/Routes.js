@@ -1,12 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom';
-import AllCategoryCourses from '../components/AllCategoryCourses';
-import Blog from '../components/Blog';
-import Courses from '../components/Courses';
-import FAQ from '../components/FAQ';
-import Registration from '../components/Registration';
-import ErrorPage from '../components/Shared/ErrorPage';
-import SignIn from '../components/SignIn';
-import Main from '../layout/Main';
+import Registration from '../components/Auth/Registration';
+import SignIn from '../components/Auth/SignIn';
+import Blog from '../components/Pages/Blog';
+import AllCategoryCourses from '../components/Pages/Categories/AllCategoryCourses';
+import Courses from '../components/Pages/Courses/Courses';
+import FAQ from '../components/Pages/FAQ';
+import ErrorPage from '../components/Shared/ErrorPage.jsx';
+import Main from '../layout/Main.jsx';
 
 export const routes = createBrowserRouter([
     {

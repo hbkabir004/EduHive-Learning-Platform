@@ -1,8 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Footer from '../components/Shared/Footer';
-// import { Outlet } from 'react-router-dom';
-// import AllCourse from '../components/AllCourse';
 import Header from '../components/Shared/Header';
 
 const Main = () => {

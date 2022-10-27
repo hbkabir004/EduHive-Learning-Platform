@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+
 import Categories from './Categories';
 import CategoryCourse from './CategoryCourse';
 
@@ -25,6 +27,7 @@ const AllCategoryCourses = () => {
                             }
                         </div>
                     </div>
+
                 </div>
 
             </div>
