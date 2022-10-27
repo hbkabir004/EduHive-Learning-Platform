@@ -2,9 +2,9 @@ import { createBrowserRouter } from 'react-router-dom';
 import AllCategoryCourses from '../components/AllCategoryCourses';
 import Blog from '../components/Blog';
 import Courses from '../components/Courses';
-import ErrorPage from '../components/ErrorPage';
 import FAQ from '../components/FAQ';
 import Registration from '../components/Registration';
+import ErrorPage from '../components/Shared/ErrorPage';
 import SignIn from '../components/SignIn';
 import Main from '../layout/Main';
 

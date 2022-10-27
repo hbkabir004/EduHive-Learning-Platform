@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { FaUser } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { AuthContext } from '../contexts/UserContext';
+import { AuthContext } from '../../contexts/UserContext';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
