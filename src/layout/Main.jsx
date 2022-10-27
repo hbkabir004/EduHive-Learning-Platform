@@ -14,6 +14,8 @@ const Main = () => {
                     </div>
                     <div className='col-span-2'>
                         <Outlet></Outlet>
+                        {/* <AllCourse></AllCourse> */}
+
                     </div>
 
                 </div>

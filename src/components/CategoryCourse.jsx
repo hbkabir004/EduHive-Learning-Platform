@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const CourseCard = ({ singleCourse }) => {
-    const { title, category, price, about } = singleCourse;
-
+const CategoryCourse = ({ singleCourse }) => {
+    const { title, categoryName, price, about } = singleCourse;
     return (
         <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
             <div class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
@@ -21,4 +20,4 @@ const CourseCard = ({ singleCourse }) => {
     );
 };
 
-export default CourseCard;
+export default CategoryCourse;

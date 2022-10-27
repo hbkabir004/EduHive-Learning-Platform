@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import AllCourse, { CourseContext } from './AllCourse';
+import { CourseContext } from './AllCourse';
 import Categories from './Categories';
+import CourseCard from './CourseCard';
 
 const Courses = () => {
     const allCourses = useContext(CourseContext);
@@ -12,7 +13,8 @@ const Courses = () => {
                     <Categories></Categories>
                 </div>
                 <div className='col-span-2'>
-                    <AllCourse></AllCourse>
+                    {/* <AllCourse></AllCourse> */}
+                    <CourseCard></CourseCard>
                 </div>
 
             </div>
