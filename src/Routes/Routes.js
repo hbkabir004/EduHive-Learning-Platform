@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import AllCategoryCourses from '../components/AllCategoryCourses';
-import AllCourse from '../components/AllCourse';
 import Blog from '../components/Blog';
+import Courses from '../components/Courses';
 import ErrorPage from '../components/ErrorPage';
 import FAQ from '../components/FAQ';
 import Registration from '../components/Registration';
@@ -27,7 +27,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/courses',
-                element: <AllCourse></AllCourse>,
+                element: <Courses></Courses>,
             },
             {
                 path: '/courses/category/:id',

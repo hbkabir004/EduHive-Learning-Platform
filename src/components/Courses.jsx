@@ -1,11 +1,10 @@
-import React, { useContext } from 'react';
-import { CourseContext } from './AllCourse';
+import React from 'react';
+import AllCourse from './AllCourse';
 import Categories from './Categories';
-import CourseCard from './CourseCard';
 
 const Courses = () => {
-    const allCourses = useContext(CourseContext);
-    console.log(allCourses);
+    // const allCourses = useContext(CourseContext);
+    // console.log(allCourses);
     return (
         <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
             <div className='grid grid-cols-3'>
@@ -13,8 +12,7 @@ const Courses = () => {
                     <Categories></Categories>
                 </div>
                 <div className='col-span-2'>
-                    {/* <AllCourse></AllCourse> */}
-                    <CourseCard></CourseCard>
+                    <AllCourse></AllCourse>
                 </div>
 
             </div>
