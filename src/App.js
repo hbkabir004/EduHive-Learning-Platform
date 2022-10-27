@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import AllCourse from './components/AllCourse';
 import Blog from './components/Blog';
 import Courses from './components/Courses';
 import ErrorPage from './components/ErrorPage';
@@ -30,6 +31,11 @@ function App() {
           path: '/courses',
           element: <Courses></Courses>,
           loader: ()=> fetch(`https://eduhive-server.vercel.app/category`)
+        },
+        {
+          path: '/allcourses',
+          element: <AllCourse></AllCourse>,
+          loader: ()=> fetch(`https://eduhive-server.vercel.app/courses`)
         },
         {
           path: '/faq',
