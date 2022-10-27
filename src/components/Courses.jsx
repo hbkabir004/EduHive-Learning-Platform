@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AllCourse, { CourseContext } from './AllCourse';
 import Categories from './Categories';
 
-const Courses = ({ allCourses }) => {
+const Courses = () => {
+    const allCourses = useContext(CourseContext);
     console.log(allCourses);
     return (
         <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
@@ -10,7 +12,7 @@ const Courses = ({ allCourses }) => {
                     <Categories></Categories>
                 </div>
                 <div className='col-span-2'>
-                    {/* <AllCourse></AllCourse> */}
+                    <AllCourse></AllCourse>
                 </div>
 
             </div>
