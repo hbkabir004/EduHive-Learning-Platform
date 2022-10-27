@@ -87,32 +87,27 @@ const FAQ = () => {
                                         height="24"
                                     />
                                 </svg>
-                                <span class="relative">The</span>
-                            </span>{' '}
-                            quick, brown fox jumps over a lazy dog
+                                <span class="relative">Frequently Asked Questions</span>
+                            </span>
                         </h2>
                         <p class="text-base text-gray-700 md:text-lg">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque rem aperiam, eaque ipsa quae.
+                            This page is a central hub where its customers can always go to with their most common questions. These are the most popular questions about EduHive.
                         </p>
                     </div>
                 </div>
                 <div class="space-y-4">
-                    <Item title="The quick, brown fox jumps over a lazy dog?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    <Item className="font-semibold" title="Solve problems with your Coursera account">
+                        If you need to change your Coursera account settings, like your name, email address, or password, you can use your Settings page.
                     </Item>
-                    <Item title="The first mate and his Skipper too will do?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    <Item className="font-semibold" title="What about the Video translations?">
+                        To see translated subtitles for a video, turn subtitles on and choose the language you want to see subtitles in. <br></br>
+                        You can see what languages are available for a course by checking the course's description page. If a language is listed, that means at least 80\% of the course's video subtitles have been translated. When you search for courses, you can filter your search to find courses that have translations in certain languages.
                     </Item>
-                    <Item title="Is the Space Pope reptilian!?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    <Item className="font-semibold" title="How I can Change my subscription plan">
+                        Some Specializations are available for subscriptions on a monthly plan. Your credit card will be charged every month as long as your subscription is active. You can cancel a subscription any time.
                     </Item>
-                    <Item title="How much money you got on you?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    <Item className="font-semibold" title="What about the Refund policies?">
+                        If you decide not to complete a course or Specialization that you've paid for, Eduhive may be able to refund your payment depending on our refund policies. You can read our refund policies in full in Coursera's Terms of Use.
                     </Item>
                 </div>
             </div>
