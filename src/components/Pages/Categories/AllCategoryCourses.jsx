@@ -38,7 +38,7 @@ const AllCategoryCourses = () => {
                 <div className='lg:col-span-2'>
                     <div>
                         <div className='flex justify-evenly font-semibold text-xl p-5 rounded-md shadow-md mx-10 text-center text-deep-purple-accent-400 hover:shadow-xl hover:text-gray-700'>
-                            <h1 className='mx-auto lg:text-xl text-sm lg:px-0 px-2'>{name[0]} Courses: {allCourses.length}</h1>
+                            <h1 className='mx-auto'>{name[0]} Courses: {allCourses.length}</h1>
                             <div
                                 onClick={handleDownloadPdf}
                                 className="lg:px-0 pr-2 text-gray-500 transition-colors duration-300 hover:text-teal-accent-400" rel="noreferrer"
