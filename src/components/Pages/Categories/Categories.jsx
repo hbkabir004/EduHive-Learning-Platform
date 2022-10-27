@@ -15,7 +15,7 @@ const Categories = () => {
         <div>
             <h1 className='font-semibold text-xl p-5 rounded-md shadow-md mx-10 text-center text-deep-purple-accent-400 hover:shadow-xl hover:text-gray-700'>Course Categories: {categories.length}</h1>
 
-            <div className='font-semibold py-5 rounded-md mx-10 text-center'>
+            <div className='font-semibold py-5 rounded-md mx-10 text-center '>
                 {
                     categories.map(category => <Link to={`/courses/category/${category.id}`}>
                         {
