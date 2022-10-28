@@ -53,7 +53,7 @@ const Footer = () => {
                             </svg>
                         </a>
                         <a
-                            href="/https://www.facebook.com/abircse.nwu/"
+                            href="https://www.facebook.com/abircse.nwu/"
                             className="text-gray-500 transition-colors duration-300 hover:text-teal-accent-400"
                         >
                             <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
