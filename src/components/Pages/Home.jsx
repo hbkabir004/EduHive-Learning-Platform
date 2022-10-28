@@ -32,7 +32,7 @@ const Home = () => {
                             thought.
                         </span>
                     </h2>
-                    <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
+                    <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg dark:text-black">
                         We’ve got the solution: world-class training and development programs developed by top universities and companies. All on Coursera for Business.
                     </p>
                     <div className="flex items-center">
