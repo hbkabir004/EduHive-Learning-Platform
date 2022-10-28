@@ -187,7 +187,7 @@ const Header = () => {
                         </button>
                         {isMenuOpen && (
                             <div className="absolute top-0 left-0 w-full">
-                                <div className="p-5 bg-white border rounded shadow-sm">
+                                <div className="p-5 bg-white border rounded shadow-sm  dark:bg-gray-500">
                                     <div className="flex items-center justify-between mb-4">
                                         <div>
                                             <Link

@@ -27,7 +27,7 @@ const PostCheckout = () => {
                         <li class="py-3 sm:py-4">
                             <div class="flex items-center space-x-4">
                                 <div class="flex-shrink-0 ">
-                                    <img class="lg:w-8 lg:h-8 w-1/2 rounded-full" src={img} />
+                                    <img class="lg:w-8 lg:h-8 w-32 rounded-full" src={img} />
                                     <p class="lg:hidden block my-2 text-sm font-semibold ml-2 text-gray-900 truncate dark:text-white">
                                         {title}
                                     </p>
@@ -39,10 +39,10 @@ const PostCheckout = () => {
                                     <p class="hidden lg:block text-sm font-medium text-gray-900 truncate dark:text-white">
                                         {title}
                                     </p>
-                                    <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    <p class="hidden lg:block text-sm text-gray-500 truncate dark:text-gray-400">
                                         Category: {categoryName}
                                     </p>
-                                    <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    <p class="hidden lg:block text-sm text-gray-500 truncate dark:text-gray-400">
                                         Course ID: {id}
                                     </p>
                                     <p class="hidden lg:block text-sm text-gray-500 truncate dark:text-gray-400">
