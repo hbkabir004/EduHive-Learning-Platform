@@ -1,4 +1,4 @@
-# Aungstrome EduHive Client Side Repository (Assignment-10)
+# Aungstrome EduHive Client Side Repository
 
 React.js Web Application for an online educational platform with firebase authentication. Made using React.js, Tailwind CSS and React Router DOM and Google firebase Auth.
 
