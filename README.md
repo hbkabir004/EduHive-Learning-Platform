@@ -6,9 +6,9 @@ React.js Web Application for an online educational platform with firebase authen
 
 Hosted in Firebase -> [Aungstrome EduHive Website](https://eduhive-5be1b.web.app/)
 
-## Context API
+## Server Side Repository
 
-Documentation Link -> [Link](https://reactjs.org/docs/context.html#api)
+Eduhive Server -> [Link](https://github.com/hbkabir004/EduHive-Server)
 
 ## React Router Dom v6.4
 
