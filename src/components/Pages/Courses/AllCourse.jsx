@@ -10,6 +10,7 @@ const AllCourse = () => {
             .then(res => res.json())
             .then(data => setCourses(data));
     }, [])
+
     return (
         <CourseContext.Provider value={courses}>
             <h1 className='dark:bg-black dark:text-white font-semibold text-xl p-5 rounded-md shadow-md mx-10 text-center text-deep-purple-accent-400 hover:shadow-xl hover:text-gray-700'>All Courses: {courses.length}</h1>
